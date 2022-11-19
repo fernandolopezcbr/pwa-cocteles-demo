@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Mis Notas | I like coctel</title>
+    <link rel="stylesheet" href="notes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+   
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+
+
+    <style>
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 400px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 80px;
+}
+a:nth-child(2) {
+	width: 80px;
+}
+a:nth-child(3) {
+	width: 80px;
+}
+a:nth-child(4) {
+	width: 80px;
+}
+a:nth-child(5) {
+	width: 80px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 80px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 80px;
+	left: 80px;
+	background-color: #e67e22;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 80px;
+	left: 160px;
+	background-color: #e74c3c;;
+    
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 80px;
+	left: 240px;
+	background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 80px;
+	left: 320px;
+	background-color: #3498db;
+}
+
+body {
+	
+	background: #6e3e81;
+}
+
+
+
+
+
+
+@media (max-width: 600px){
+
+
+    .menu-fijado{
+    margin: 0px 35px;
+	position: fixed;
+}
+
+
+    nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 280px;
+	height: 50px;
+    
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 55px;
+}
+a:nth-child(2) {
+	width: 55px;
+}
+a:nth-child(3) {
+	width: 55px;
+}
+a:nth-child(4) {
+	width: 55px;
+}
+a:nth-child(5) {
+	width: 55px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 50px;
+	left: 0;
+	
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 55px;
+	left: 55px;
+	
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 55px;
+	left: 110px;
+	
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 55px;
+	left: 165px;
+	
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 55px;
+	left: 220px;
+	
+}
+
+
+
+
+}
+
+
+.cartAmount {
+ /* position: absolute;
+  top: -10px;
+  margin: 15px;
+  right: -5px;
+  font-size: 15px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  
+  height: 20px;
+  */
+  position: absolute;
+  top: -20px;
+  margin: 5px;
+  right: -3px;
+  font-size: 16px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  height: 45px;
+}
+
+
+    </style>
+
+
+
+  </head>
+  <body>
+
+    <header class="menu-fijado" >
+
+        <nav>
+            <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="cocteles.html"><i class="fa fa-glass" aria-hidden="true"></i></a>
+            <a href="cart.html">     
+              <div class="cart">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <div id="cartAmount" class="cartAmount"><h5>0</h5></div>
+              </div>
+            </a>
+            <a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            <a href="contact.html"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <div class="animation start-portefolio"></div>
+        </nav>
+    </header>
+    
+
+
+
+
+
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form action="#">
+            <div class="row title">
+              <label>Titulo</label>
+              <input type="text" spellcheck="false">
+            </div>
+            <div class="row description">
+              <label>Descripcion</label>
+              <textarea spellcheck="false"></textarea>
+            </div>
+            <button></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+        <br><br><br><br>
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+        <p>Añadir nota nueva</p>
+      </li>
+    </div>
+
+    <script src="src/cart.js"></script>
+    <script>
+
+
+
+
+
+        const addBox = document.querySelector(".add-box"),
+popupBox = document.querySelector(".popup-box"),
+popupTitle = popupBox.querySelector("header p"),
+closeIcon = popupBox.querySelector("header i"),
+titleTag = popupBox.querySelector("input"),
+descTag = popupBox.querySelector("textarea"),
+addBtn = popupBox.querySelector("button");
+
+const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+let isUpdate = false, updateId;
+
+addBox.addEventListener("click", () => {
+    popupTitle.innerText = "Agregar nota nueva";
+    addBtn.innerText = "Agregar nota";
+    popupBox.classList.add("show");
+    document.querySelector("body").style.overflow = "hidden";
+    if(window.innerWidth > 660) titleTag.focus();
+});
+
+closeIcon.addEventListener("click", () => {
+    isUpdate = false;
+    titleTag.value = descTag.value = "";
+    popupBox.classList.remove("show");
+    document.querySelector("body").style.overflow = "auto";
+});
+
+function showNotes() {
+    if(!notes) return;
+    document.querySelectorAll(".note").forEach(li => li.remove());
+    notes.forEach((note, id) => {
+        let filterDesc = note.description.replaceAll("\n", '<br/>');
+        let liTag = `<li class="note">
+                        <div class="details">
+                            <p>${note.title}</p>
+                            <span>${filterDesc}</span>
+                        </div>
+                        <div class="bottom-content">
+                            <span>${note.date}</span>
+                            <div class="settings">
+                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+                                <ul class="menu">
+                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Editar</li>
+                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Eliminar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>`;
+        addBox.insertAdjacentHTML("afterend", liTag);
+    });
+}
+showNotes();
+
+function showMenu(elem) {
+    elem.parentElement.classList.add("show");
+    document.addEventListener("click", e => {
+        if(e.target.tagName != "I" || e.target != elem) {
+            elem.parentElement.classList.remove("show");
+        }
+    });
+}
+
+function deleteNote(noteId) {
+    let confirmDel = confirm("Deseas eliminar permanentemente esta nota?");
+    if(!confirmDel) return;
+    notes.splice(noteId, 1);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    showNotes();
+}
+
+function updateNote(noteId, title, filterDesc) {
+    let description = filterDesc.replaceAll('<br/>', '\r\n');
+    updateId = noteId;
+    isUpdate = true;
+    addBox.click();
+    titleTag.value = title;
+    descTag.value = description;
+    popupTitle.innerText = "Editar Nota";
+    addBtn.innerText = "Guardar";
+}
+
+addBtn.addEventListener("click", e => {
+    e.preventDefault();
+    let title = titleTag.value.trim(),
+    description = descTag.value.trim();
+
+    if(title || description) {
+        let currentDate = new Date(),
+        month = months[currentDate.getMonth()],
+        day = currentDate.getDate(),
+        year = currentDate.getFullYear();
+
+
+
+        
+ 
+        var hoy = new Date();       
+        var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+
+        let noteInfo = {title, description, date: hora + `<br>${day} ${month}, ${year}` }
+        if(!isUpdate) {
+            notes.push(noteInfo);
+        } else {
+            isUpdate = false;
+            notes[updateId] = noteInfo;
+        }
+        localStorage.setItem("notes", JSON.stringify(notes));
+        showNotes();
+        closeIcon.click();
+    }
+});
+    </script>
+    
+  </body>
+</html>

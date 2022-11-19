@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+   
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+
+
+  
+
+
+
+
+
+  <style>
+
+
+/*MENU*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    margin: 0px 35%;
+	position: fixed;
+}
+
+
+nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 400px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 80px;
+}
+a:nth-child(2) {
+	width: 80px;
+}
+a:nth-child(3) {
+	width: 80px;
+}
+a:nth-child(4) {
+	width: 80px;
+}
+a:nth-child(5) {
+	width: 80px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 80px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 80px;
+	left: 80px;
+	background-color:#e67e22;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 80px;
+	left: 160px;
+	background-color: #e74c3c;;
+    
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 80px;
+	left: 240px;
+	background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 80px;
+	left: 320px;
+	background-color: #3498db;
+}
+
+body {
+	
+	background: #2c3e50;
+}
+
+
+
+
+
+
+@media (max-width: 600px){
+
+    header{
+    margin: 0px 35px;
+	position: fixed;
+}
+
+
+    nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 280px;
+	height: 50px;
+    
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 55px;
+}
+a:nth-child(2) {
+	width: 55px;
+}
+a:nth-child(3) {
+	width: 55px;
+}
+a:nth-child(4) {
+	width: 55px;
+}
+a:nth-child(5) {
+	width: 55px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 50px;
+	left: 0;
+	
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 55px;
+	left: 55px;
+	
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 55px;
+	left: 110px;
+	
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 55px;
+	left: 165px;
+	
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 55px;
+	left: 220px;
+	
+}
+
+
+
+
+}
+
+
+
+
+/*FIN MENU*/
+
+
+
+/*BOTONES SECCION CATEGORIAS*/
+
+.button-value {
+    border: 2px solid #32968a;
+    padding: .4em 1.3em;
+    margin-top: .5em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #32968a;
+    cursor: pointer;
+    max-width: 18em;
+  }
+  .button-value:hover {
+    background-color: #32968a;
+    color: #ffffff;
+  }
+    .active {
+    background-color: #32968a;
+    color: #ffffff;
+  }
+
+  /*
+  .button-value:checked ~ .tab-bg-hover{
+    transform: translateX(100%);
+  }
+  */
+/*FIN BOTONES*/
+
+
+      /*FIN SECCION WRAPPER O CARDS*/
+
+
+
+
+      /*Styles for product card*/
+
+.product .product-card{
+  z-index: 1;
+  background: #1D212B;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  border-radius: 10px;
+}
+
+
+
+/*
+.product .product-card:before{
+  content: '';
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+*/
+/*AJUSTAR ANCHO DE IMAGEN*/
+
+
+
+.product .product-card .product-img{
+   width: 250px;
+  height: 220px;
+  object-fit: cover;
+  
+  
+
+  margin: 18px;
+  border-radius: 10px;
+  position: relative;
+  right: -5px;
+  
+  
+
+}
+
+.product .product-card .name{
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 130px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.product .product-card .price{
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 80px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.product .product-card .popup-btn{
+  z-index: 2;
+  color: #fff;
+  background: #555;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*Styles for popup view*/
+
+
+.product .popup-view{
+  z-index: 2;
+  background: #0008;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+
+.product .popup-view.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.product .popup-card{
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+}
+
+
+.product .popup-card .product-img{
+  z-index: 2;
+  background: #1D212B;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 90%;
+  transform: translateY(25px);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.product .popup-card .product-img img{
+  z-index: 2;
+  position: relative;
+  width: 450px;
+  left: -50px;
+}
+
+.product .popup-card .info{
+  z-index: 2;
+  background: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  border-radius: 10px;
+}
+/*CLOSED BOTON MODADL*/
+.product .popup-card .close-btn{
+  color: #fff;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  top: 0rem;
+   
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.9rem;
+    
+    background-color: rgba(116, 116, 116, 0.479);
+    transition: background-color 300ms linear , transform 300ms ease-in-out;
+}
+
+.product .popup-card .close-btn:hover{
+    background-color: black;
+    transform: scale(1.3);
+  }
+
+.product .popup-card .info h2{
+  font-size: 40px;
+  line-height: 20px;
+  margin: 10px;
+}
+
+.product .popup-card .info h2 span{
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.product .popup-card .info p{
+  font-size: 15px;
+  margin: 10px;
+}
+
+.product .popup-card .info .price{
+  font-size: 45px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+.product .popup-card .info .add-cart-btn{
+  color: #fff;
+  background: #009DD2;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px auto;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+.product .popup-card .info .add-wish{
+  color: #009DD2;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-name{
+    display:none;
+  }
+
+/*Responsive styles*/
+
+@media (max-width: 900px){
+  .product .popup-card{
+    flex-direction: column;
+    width: 550px;
+    height: auto;
+  }
+
+  .product .popup-card .product-img{
+    z-index: 3;
+    width: 100%;
+    height: 200px;
+    transform: translateY(0);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .product .popup-card .product-img img{
+    left: initial;
+    max-width: 100%;
+  }
+
+  .product .popup-card .info{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .product .popup-card .info h2{
+    margin: 20px 5px 5px 5px;
+    font-size: 25px;
+  }
+
+  .product .popup-card .info h2 span{
+    font-size: 10px;
+  }
+
+  .product .popup-card .info p{
+    margin: 5px;
+    font-size: 13px;
+  }
+
+  .product .popup-card .info .price{
+    margin: 5px;
+    font-size: 30px;
+  }
+
+  .product .popup-card .info .add-cart-btn{
+    margin: 5px auto;
+    padding: 5px 40px;
+    font-size: 14px;
+  }
+
+  .product .popup-card .info .add-wish{
+    font-size: 14px;
+  }
+
+  .product .popup-card .close-btn{
+    z-index: 4;
+  }
+}
+   
+
+@media (max-width: 720px){
+
+.product .product-card{
+z-index: 1;
+background: transparent;
+position: relative;
+width: 230px;
+height: 300px;
+margin: 40px;
+border-radius: 10px;
+max-width: 10em;
+margin-top: 1em;
+right: 50px;
+border: 2px solid #32968a;
+}
+
+.product .product-card .product-img{
+ width: 100%;
+height: 200px;
+object-fit: cover;
+
+
+
+margin: 18px;
+border-radius: 10px;
+position: relative;
+right: 18px;
+
+
+
+}
+
+/*POSICION DE VENTANA MODAL*/
+.product .popup-card{
+  flex-direction: column;
+  width: 550px;
+  height: auto;
+  max-width: 20em;
+  margin-top: 1em;
+  left: 0px;
+}
+
+.product .popup-card .product-img{
+  z-index: 3;
+  width: 100%;
+  height: 200px;
+  transform: translateY(0);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*INDECISO*/
+
+.product .popup-card .product-img img{
+  left: initial;
+  max-width: 100%;
+  /* width: 100%;
+height: 200px;
+object-fit: cover;
+*/
+  
+}
+
+.product .popup-card .info{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.product .popup-card .info h2{
+  margin: 20px 5px 5px 5px;
+  font-size: 25px;
+}
+
+.product .popup-card .info h2 span{
+  font-size: 18px;
+}
+
+.product .popup-card .info p{
+  margin: 5px;
+  font-size: 13px;
+}
+
+.product .popup-card .info .price{
+  margin: 5px;
+  font-size: 30px;
+}
+
+.product .popup-card .info .add-cart-btn{
+  margin: 5px auto;
+  padding: 5px 40px;
+  font-size: 14px;
+}
+
+.product .popup-card .info .add-wish{
+  font-size: 14px;
+}
+
+.product .popup-card .close-btn{
+  z-index: 4;
+}
+}
+
+
+
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    
+  }
+  
+  .swiper{
+    padding: 7px;
+    background-color: #fff;
+    height: 110px;
+    margin-top: 2em;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+    border: solid rgb(236, 232, 232);
+    
+  }
+
+ 
+  #search-container {
+    margin: 2em 0;
+    text-align: center;
+  }
+  #search-container input {
+    background-color: #fff;
+    width: 65%;
+    border-bottom: 2px solid #110f29;
+    padding: 1em 0.3em;
+    border-radius: 3em;
+    text-align: center;
+  }
+  #search-container input:focus {
+    border-bottom-color: #32968a;
+  }
+  #search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #32968a;
+    color: #ffffff;
+    border-radius: 15px;
+    margin-top: 1em;
+  }
+  #search-container button:hover {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <header>
+    <nav>
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="cocteles.html"><i class="fa fa-glass" aria-hidden="true"></i></a>
+        <a href="cart.html">     
+          <div class="cart">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <div id="cartAmount" class="cartAmount"><h5>0</h5></div>
+          </div>
+        </a>
+        <a href="notes.html"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        <a href="contact.html"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <div class="animation start-about"></div>
+    </nav>
+    
+
+</header>
+
+
+
+
+
+
+  <div class="wrapper">
+    <br><br><br><br><br>
+    <div id="search-container">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Buscar coctel.."
+      />
+      <button id="search">Buscar</button>
+    </div>
+
+    <div id="buttons">
+      <button class="button-value" onclick="filterProduct('all')">
+        Todo
+      </button>
+            
+      <button class="button-value" onclick="filterProduct('baileys')">
+        Baileys
+    </button>
+
+    <button class="button-value" onclick="filterProduct('brandy')">
+        Brandy
+    </button>
+
+    <button class="button-value" onclick="filterProduct('cafe')">
+        Cafe
+    </button>
+
+    <button class="button-value" onclick="filterProduct('cerveza')">
+        Cerveza
+    </button>
+
+    <button class="button-value" onclick="filterProduct('gin')">
+        Gin
+    </button>
+
+    <button class="button-value" onclick="filterProduct('jagger')">
+        Jagger
+    </button>
+
+    <button class="button-value" onclick="filterProduct('kahlua')">
+        Kahlua
+    </button>
+
+    <button class="button-value" onclick="filterProduct('quezalteca')">
+        Quezalteca
+    </button>
+
+    <button class="button-value" onclick="filterProduct('tequila')">
+        Tequila
+    </button>
+
+    <button class="button-value" onclick="filterProduct('ron')">
+        Ron
+    </button>
+
+    <button class="button-value" onclick="filterProduct('vino')">
+        Vino
+    </button>
+
+    <button class="button-value" onclick="filterProduct('vodka')">
+        Vodka
+    </button>
+
+    <button class="button-value" onclick="filterProduct('whisky')">
+        Whisky
+    </button>
+
+    </div>
+<br>
+  </div>
+   
+
+  <div class="shop" id="shop"></div>
+
+ 
+
+</body>
+<script src="src/Data.js"></script>
+<script src="src/main.js"></script>
+<script src="script.js"></script>
+<script>
+
+
+
+function filterProduct(value) {
+
+
+    
+//Button class code
+let buttons = document.querySelectorAll(".button-value");
+buttons.forEach((button) => {
+  //check if value equals innerText
+  if (value.toUpperCase() == button.innerText.toUpperCase()) {
+    button.classList.add("active");
+  } else {
+    button.classList.remove("active");
+  }
+})  ;
+
+
+
+//select all cards
+let elements = document.querySelectorAll(".card");
+//loop through all cards
+elements.forEach((element) => {
+  //display all cards on 'all' button click
+  if (value == "all") {
+    element.classList.remove("hide");
+  } else {
+    //Check if element contains category class
+    if (element.classList.contains(value)) {
+      //display element based on category
+      element.classList.remove("hide");
+    } else {
+      //hide other elements
+      element.classList.add("hide");
+    }
+  }
+});
+
+
+
+
+
+}
+
+
+
+
+
+
+
+document.getElementById("search").addEventListener("click", () => {
+  
+  
+  //al evento keypress(click al buscar)
+//addEventListener("keypress", () => {
+
+
+  //initializations
+  let searchInput = document.getElementById("search-input").value;
+  let elements = document.querySelectorAll(".product-name");
+  let cards = document.querySelectorAll(".card");
+
+  //let productos = document.getElementById("products")
+
+  //section.innerHTML = `<img class="loader" src="oval.svg"  alt="Cargando...">`;
+
+
+  /*
+  if (elements.includes(searchInput) === 0) {
+          productos.innerHTML = `<h2>No existen resultados de shows para la busqueda : <mark>${query}</mark><h2>`
+        } else {
+        
+        }
+        */
+                    //loop through all elements
+  elements.forEach((element, index) => {
+    //check if text includes the search value
+    if (element.innerText.includes(searchInput.toUpperCase())) {
+      //display matching card
+      cards[index].classList.remove("hide");
+    } else {
+      //hide others
+      cards[index].classList.add("hide");
+    }
+  });
+          
+
+
+        
+ 
+
+  //section.innerHTML = "";
+  
+});
+
+
+
+
+
+
+
+//Initially display all products
+window.onload = () => {
+  filterProduct("all");
+  
+};
+
+
+
+
+
+
+</script>
+</html>

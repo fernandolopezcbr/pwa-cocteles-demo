@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de Cocteles | I like</title>
+
+
+  <meta name="description" content="Bienvenid@s a #ProgramadorFitness, serie de videos, donde te daré consejos para llevar una vida saludable y evitar el sedentarismo. Recuerda... mente sana en cuerpo sano :)">
+
+  <meta name="theme-color" content="transparent">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="./img/ProgramadorFitness.png">
+  <link rel="apple-touch-icon" href="./ProgramadorFitness.png">
+  <link rel="apple-touch-startup-image" href="./ProgramadorFitness.png">
+  <link rel="manifest" href="./manifest.json">
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+   
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+
+    
+
+
+
+
+
+
+    <style>
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    margin: 0px 35%;
+	position: fixed;
+}
+
+
+nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 400px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 80px;
+}
+a:nth-child(2) {
+	width: 80px;
+}
+a:nth-child(3) {
+	width: 80px;
+}
+a:nth-child(4) {
+	width: 80px;
+}
+a:nth-child(5) {
+	width: 80px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 80px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 80px;
+	left: 80px;
+	background-color:#e67e22;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 80px;
+	left: 160px;
+	background-color: #e74c3c;;
+    
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 80px;
+	left: 240px;
+	background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 80px;
+	left: 320px;
+	background-color: #3498db;
+}
+
+body {
+	
+	background: #2c3e50;
+}
+
+
+
+
+
+
+@media (max-width: 600px){
+
+    header{
+    margin: 0px 35px;
+	position: fixed;
+}
+
+
+    nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 280px;
+	height: 50px;
+    
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+
+
+a:nth-child(1) {
+	width: 55px;
+}
+a:nth-child(2) {
+	width: 55px;
+}
+a:nth-child(3) {
+	width: 55px;
+}
+a:nth-child(4) {
+	width: 55px;
+}
+a:nth-child(5) {
+	width: 55px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 50px;
+	left: 0;
+	
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 55px;
+	left: 55px;
+	
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 55px;
+	left: 110px;
+	
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 55px;
+	left: 165px;
+	
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 55px;
+	left: 220px;
+	
+}
+
+
+
+
+}
+
+
+/*PORTADA Y LETRAS*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+
+
+
+.container-portada {
+    
+
+        font-family: "Vibur", cursive;
+	font-size: 1rem;
+	background-image: url("https://www.dropbox.com/s/2ct0i6kc61vp0bh/wall.jpg?raw=1");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #141414;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+background-size: cover;
+  background-position: center;  
+}
+/* tamaño de fuente*/
+.container-portada span {
+    font-family: 'Comforter', cursive;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box; 
+  font-size: 10rem;
+  opacity: .1;
+  user-select: none;
+  transition: all .3s;
+}
+
+.container-portada span::before {
+  position: absolute;
+  content: attr(data-text);
+  filter: blur(1rem);
+}
+
+.container-portada .animar {
+  filter: contrast(200%);
+  opacity: 1;   
+}
+
+.container-portada * {  
+  color: transparent;
+  -webkit-text-stroke: 2px #4edcff;
+}
+
+@media(max-width: 720px){
+    #letras{
+    flex-direction: row;
+  font-size: 3.5rem;
+
+  
+  }
+
+.logo-qt{
+   height:  300px;
+   width: 310px;
+  
+   
+
+}
+
+
+.image{
+
+
+height: 500px;
+width: 0px;
+/*filtro contorno neon*/
+filter: drop-shadow( 8px 8px 8px #374947c7)
+
+
+
+
+/*
+max-width: 210px;
+ max-height: 200px;
+*/
+
+
+}
+
+
+}
+@media(max-width: 574px){
+  .container-portada span{
+    display: inline-block; 
+  font-size: 2rem;
+  letter-spacing: 2px;
+  
+  }
+}
+
+
+
+
+
+/*FIN PORTADA Y LETRAS*/
+
+
+/*SECCION NOTIFC ROJO FAVORITOS*/
+
+.cartAmount {
+ /* position: absolute;
+  top: -10px;
+  margin: 15px;
+  right: -5px;
+  font-size: 15px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  
+  height: 20px;
+  */
+  position: absolute;
+  top: -20px;
+  margin: 5px;
+  right: -3px;
+  font-size: 16px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  height: 45px;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    
+
+    <header>
+        <nav>
+            <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="cocteles.html"><i class="fa fa-glass" aria-hidden="true"></i></a>
+            <a href="cart.html">     
+              <div class="cart">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <div id="cartAmount" class="cartAmount"><h5>0</h5></div>
+              </div>
+            </a>
+            <a href="notes.html"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            <a href="contact.html"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <div class="animation start-home"></div>
+        </nav>
+        
+
+    </header>
+
+
+
+
+
+
+
+
+     
+<div class="container-portada">    
+
+
+    <center class="image" class="letra">
+
+    
+
+
+    </center>
+
+
+    <div id="letras" class="banner">
+
+
+        <br><br><br><br><br><br><br><br><br>
+
+
+
+        <span class="letra" data-text="B">T</span>
+        <span class="letra" data-text="a">u</span>
+        <span class="letra" data-text="">&nbsp;</span>
+        <span class="letra" data-text="C">C</span>
+        <span class="letra" data-text="o">o</span>
+        <span class="letra" data-text="c">c</span>
+        <span class="letra" data-text="t">t</span>
+        <span class="letra" data-text="e">e</span>
+        <span class="letra" data-text="l">l</span>
+         <span class="letra" data-text="">&nbsp;</span>
+        
+         <span class="letra" data-text="F">F</span>
+        <span class="letra" data-text="a">a</span>
+        <span class="letra" data-text="v">v</span>
+         <span class="letra" data-text="o">o</span>
+        <span class="letra" data-text="r">r</span>
+        <span class="letra" data-text="i">i</span>
+        <span class="letra" data-text="t">t</span>
+        <span class="letra" data-text="o">o</span>
+
+        
+    </div>
+
+ 
+    
+
+
+
+
+
+
+</div>
+
+
+
+<script src="./script.js"></script>
+<script src="src/cart.js"></script>
+
+<script>
+
+
+    const contenedor = document.querySelectorAll(".container-portada .letra");
+    
+    let tiempo = 1000
+    contenedor.forEach(element => {
+    
+        setInterval(() => {
+            setTimeout(() => {
+                element.classList.toggle("animar")        
+            }, tiempo);             
+            tiempo += 100;
+        }, 300);
+            
+    });
+    </script>
+
+</body>
+</html>
